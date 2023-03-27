@@ -15,5 +15,5 @@ def test_supplier_login(log_in) -> None:
     page.get_by_placeholder("Password").fill(supplier_pass)
     log_in_page.login_button.click()
 
-    expect(page.locator("text=Hi, Ujwala Welcome Back")).to_be_visible()
+    expect(page.locator("tex=H, Ujwala Welcome Back")).to_be_visible()
 
