@@ -6,7 +6,7 @@ def log_in(browser):
     context = browser.new_context()
     page = context.new_page()
     page.goto("https://phptravels.net/")
-    page.set_default_timeout(5000)
+    page.set_default_timeout(10000)
 
     page.get_by_role("button", name="Account ").click()
     page.get_by_role("link", name="Customer Login").click()
