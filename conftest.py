@@ -1,13 +1,10 @@
 import pytest
 from playwright.sync_api import Playwright
 
-@pytest.fixture()
-def log_in(playwright: Playwright):
-    browser = playwright.chromium.launch(headless=False)
+@pytest.fixture(scope="function")
+def log_in(browser):
     context = browser.new_context()
-
     page = context.new_page()
-
     page.goto("https://phptravels.net/")
     page.set_default_timeout(5000)
 
